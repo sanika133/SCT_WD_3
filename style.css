@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body{
+    background-image: linear-gradient(45deg,
+  hsl(178deg 87% 51%) 0%,
+  hsl(184deg 100% 49%) 5%,
+  hsl(188deg 100% 50%) 10%,
+  hsl(190deg 100% 50%) 14%,
+  hsl(193deg 100% 50%) 19%,
+  hsl(197deg 100% 50%) 24%,
+  hsl(213deg 100% 68%) 29%,
+  hsl(244deg 100% 78%) 33%,
+  hsl(275deg 96% 73%) 38%,
+  hsl(304deg 72% 62%) 43%,
+  hsl(321deg 94% 59%) 48%,
+  hsl(328deg 100% 55%) 52%,
+  hsl(335deg 100% 58%) 57%,
+  hsl(346deg 100% 63%) 62%,
+  hsl(359deg 100% 67%) 67%,
+  hsl(13deg 100% 64%) 71%,
+  hsl(25deg 100% 60%) 76%,
+  hsl(34deg 100% 55%) 81%,
+  hsl(42deg 100% 50%) 86%,
+  hsl(47deg 100% 50%) 90%,
+  hsl(53deg 100% 49%) 95%,
+  hsl(62deg 94% 48%) 100%
+  );
+    background-size: 600% 600%;
+    animation: gradient 19s ease-in-out infinite;
+  }
+  @keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+  }
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 0.5em;
+  }
+  
+  h2 {
+    margin-top: 0em;
+    font-size: 3rem;
+    margin-bottom: 1em;
+  }
+  
+  .play-area {
+    display: grid;
+    width: 300px;
+    height: 300px;
+    grid-template-columns: auto auto auto;
+    border-style: solid;
+    border-width: thick;
+    width: 309px;
+    height: 309px;
+  }
+  
+  .block {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center ;
+    font-size: 3rem;
+    font-weight: bold;
+    border: 3px solid black;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .block:hover {
+    cursor: pointer;
+    background: #ffffff;
+  }
+  
+  #block_0,
+  #block_1,
+  #block_2 {
+    border-top: none;
+  }
+  
+  #block_0,
+  #block_3,
+  #block_6 {
+    border-left: none;
+  }
+  
+  #block_6,
+  #block_7,
+  #block_8 {
+    border-bottom: none;
+  }
+  
+  #block_2,
+  #block_5,
+  #block_8 {
+    border-right: none;
+  }
+  
+  button {
+    outline: none;
+    border: 6px solid black;
+    padding: 10px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    cursor: pointer;
+    background: whitesmoke;
+    color: black;
+  }
+  .playerWin {
+    padding-top: 30px;
+    color: rgb(0, 130, 6);
+  }
+  
+  .computerWin {
+    padding-top: 30px;
+    color: rgb(255, 0, 0);
+  }
+  
+  .draw {
+    color: orangered;
+  }
+  
+  @media only screen and (max-width: 600px) {
+  
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+    }
+  
+    h2 {
+      margin-top: 1em;
+      font-size: 1.3rem;
+    }
+  }
